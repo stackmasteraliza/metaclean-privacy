@@ -52,9 +52,8 @@
     line-height: 1.6;
   }
   .page {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 56px 24px 96px;
+    width: 100%;
+    padding: 56px clamp(20px, 6vw, 120px) 96px;
   }
   header {
     display: flex; align-items: center; gap: 14px;
@@ -155,6 +154,55 @@
     font-size: 14px;
   }
   a { color: var(--primary); }
+  .dev-card {
+    max-width: 420px;
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .dev-avatar {
+    width: 76px; height: 76px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-soft);
+  }
+  .dev-name {
+    margin-top: 14px;
+    font-size: 18px; font-weight: 700;
+  }
+  .dev-handle {
+    display: inline-block;
+    margin-top: 6px;
+    background: var(--accent-soft);
+    color: var(--primary);
+    font-size: 13px; font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  .dev-bio {
+    margin: 14px 0 0;
+    font-size: 14px;
+    color: var(--ink-muted);
+    max-width: 40ch;
+    margin-left: auto; margin-right: auto;
+  }
+  .dev-links {
+    margin-top: 18px;
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px;
+  }
+  .dev-links a {
+    background: var(--surface-low);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-size: 13px; font-weight: 600;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .dev-links a:hover { border-color: var(--primary); color: var(--primary); }
   code {
     font-family: ui-monospace, "SF Mono", Menlo, monospace;
     background: var(--surface-low);
@@ -284,8 +332,33 @@
     <p>Questions about this policy or MetaClean's data practices? Reach us at <a href="mailto:support@metaclean.app">support@metaclean.app</a>.</p>
   </section>
 
+  <section>
+    <h2>9. About the developer</h2>
+    <div class="dev-card">
+      <img class="dev-avatar" src="https://github.com/stackmasteraliza.png" alt="Aliza Ali"
+           onerror="this.style.display='none'">
+      <div class="dev-name">Aliza Ali</div>
+      <div class="dev-handle">@stackmasteraliza</div>
+      <p class="dev-bio">
+        MetaClean is developed and owned by Aliza Ali, a full-stack developer building
+        privacy-focused apps.
+      </p>
+      <div class="dev-links">
+        <a href="https://alizaali.com" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/stackmasteraliza" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/stackmasteraliza" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://youtube.com/@stackmasteraliza" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://instagram.com/stackmasteraliza" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://buymeacoffee.com/stackmasteraliza" target="_blank" rel="noopener">Buy me a coffee</a>
+      </div>
+    </div>
+  </section>
+
   <hr>
-  <footer>MetaClean &middot; Sanitize. Protect. Personalize.</footer>
+  <footer>
+    <p>MetaClean &middot; Sanitize. Protect. Personalize.</p>
+    <p style="margin-top:6px;">Made by <a href="https://alizaali.com" target="_blank" rel="noopener">Aliza Ali</a></p>
+  </footer>
 </div>
 </body>
 </html>
